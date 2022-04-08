@@ -3,11 +3,11 @@ export const isNumber = (value: string): boolean => {
 };
 
 export const feetToMeters = (feet: string): number => {
-  return Math.round((parseFloat(feet) / 3.281) * 10000) / 10000;
+  return Math.round((parseFloat(feet) / 3.281) * 100) / 100;
 };
 
 export const metersToFeet = (meters: string): number => {
-  return Math.round(parseFloat(meters) * 3.281 * 10000) / 10000;
+  return Math.round(parseFloat(meters) * 3.281 * 100000) / 100000;
 };
 
 export const lbsToKilos = (lbs: string): number => {

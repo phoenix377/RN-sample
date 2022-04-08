@@ -21,16 +21,11 @@ import {
   TITLE_DARK,
 } from './App.styles';
 import Button from './Components/Button';
+import ImperialInput from './Components/ImperialInput';
 import Input from './Components/Input';
 import Select from './Components/Select';
 import { useStore } from './Hooks/useStore';
-import {
-  feetToMeters,
-  isNumber,
-  kilosToLbs,
-  lbsToKilos,
-  metersToFeet,
-} from './utils';
+import { isNumber, kilosToLbs, lbsToKilos } from './utils';
 
 const UNITS = {
   imperial: {
@@ -92,22 +87,16 @@ const AppMobX = observer(() => {
     });
   }, [reset, store]);
 
-  console.log(store.data);
-
   useEffect(() => {
-    const subscription = watch((value, { name, type }) => {
+    const subscription = watch((value, { name }) => {
       if (name === 'unit' && value.unit && value.weight && value.height) {
-        console.log({ name, type, value });
         if (value.unit !== unitType) {
           const newWeight =
             value.unit === 'imperial'
               ? kilosToLbs(value.weight)
               : lbsToKilos(value.weight);
 
-          const newHeight =
-            value.unit === 'imperial'
-              ? metersToFeet(value.height)
-              : feetToMeters(value.height);
+          const newHeight = value.height;
 
           setUnitType(value.unit);
           setValue('weight', newWeight.toString());
@@ -167,16 +156,27 @@ const AppMobX = observer(() => {
               required: true,
               validate: isNumber,
             }}
-            render={({ field: { onChange, onBlur, value } }) => (
-              <Input
-                onBlur={onBlur}
-                onChangeText={onChange}
-                keyboardType="numeric"
-                value={value}
-                label={UNITS[unitType]?.height}
-                error={!!errors.height}
-              />
-            )}
+            render={({ field: { onChange, onBlur, value } }) =>
+              unitType === 'imperial' ? (
+                <ImperialInput
+                  onBlur={onBlur}
+                  onChangeText={onChange}
+                  keyboardType="numeric"
+                  value={value}
+                  label={UNITS[unitType]?.height}
+                  error={!!errors.height}
+                />
+              ) : (
+                <Input
+                  onBlur={onBlur}
+                  onChangeText={onChange}
+                  keyboardType="numeric"
+                  value={value}
+                  label={UNITS[unitType]?.height}
+                  error={!!errors.height}
+                />
+              )
+            }
             name="height"
           />
           {errors.height && (

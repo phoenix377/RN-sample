@@ -19,5 +19,3 @@ Running app you'll see both versions on their respective tab.
 ## Demo
 
 ![](demo/demo1.gif)
-
-![](demo/demo2.gif)
