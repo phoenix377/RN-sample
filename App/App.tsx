@@ -75,7 +75,6 @@ const App = () => {
 
   useEffect(() => {
     load<FormData>().then(data => {
-      console.log(data);
       if (data) {
         reset({
           height: data.height,

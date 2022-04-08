@@ -36,7 +36,6 @@ const ImperialInput: React.FC<ImperialInputProps> = props => {
         parseInt(valueInch || '0', 10) / 12
       ).toString(),
     );
-    console.log('props.onChangeText', newValue);
     onChangeText?.(newValue.toString());
   }, [valueFt, valueInch, onChangeText]);
 
@@ -44,7 +43,6 @@ const ImperialInput: React.FC<ImperialInputProps> = props => {
     if (!props.value) {
       return;
     }
-    console.log('props.value', props.value);
     const imp = metersToFeet(props.value || '0');
     const ft = Math.floor(imp);
     const inch = Math.round((imp - ft) * 12);

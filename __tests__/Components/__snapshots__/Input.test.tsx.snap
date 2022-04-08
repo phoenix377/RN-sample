@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImperialInput renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "#ccc",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 40,
+        "marginBottom": 10,
+      },
+      null,
+    ]
+  }
+>
+  <TextInput
+    onChangeText={[MockFunction]}
+    style={
+      Array [
+        Object {
+          "borderColor": "gray",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "flex": 1,
+          "fontSize": 15,
+          "height": 40,
+          "paddingHorizontal": 20,
+        },
+        null,
+      ]
+    }
+    value="100"
+  />
+  <View
+    style={
+      Object {
+        "width": 40,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 15,
+          "marginLeft": 10,
+        }
+      }
+    >
+      Weight
+    </Text>
+  </View>
+</View>
+`;
