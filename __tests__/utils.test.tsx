@@ -16,8 +16,8 @@ it('isNumber works', () => {
 });
 
 it('feetToMeters works', () => {
-  expect(feetToMeters('40')).toBe(12.19);
-  expect(feetToMeters('420')).toBe(128.01);
+  expect(feetToMeters('40')).toBe(12.1914050594331);
+  expect(feetToMeters('420')).toBe(128.009753124047546);
 });
 
 it('metersToFeet works', () => {
@@ -26,8 +26,8 @@ it('metersToFeet works', () => {
 });
 
 it('lbsToKilos works', () => {
-  expect(lbsToKilos('40')).toBe(18.1406);
-  expect(lbsToKilos('420')).toBe(190.4762);
+  expect(lbsToKilos('40')).toBe(18.140589569160998);
+  expect(lbsToKilos('420')).toBe(190.476190476190476);
 });
 it('kilosToLbs works', () => {
   expect(kilosToLbs('40')).toBe(88.2);
