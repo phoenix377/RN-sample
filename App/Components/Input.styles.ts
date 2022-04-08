@@ -21,7 +21,7 @@ export const TEXT_INPUT_ERROR: ViewStyle = {
 export const TEXT_INPUT: ViewStyle & TextStyle = {
   flex: 1,
   height: 40,
-  fontSize: 20,
+  fontSize: 15,
   borderColor: 'gray',
   borderWidth: 1,
   borderRadius: 20,
@@ -35,7 +35,7 @@ export const TEXT_INPUT_DARK: ViewStyle & TextStyle = {
 
 export const LABEL: TextStyle = {
   marginLeft: 10,
-  fontSize: 20,
+  fontSize: 15,
 };
 
 export const LABEL_DARK: TextStyle = {

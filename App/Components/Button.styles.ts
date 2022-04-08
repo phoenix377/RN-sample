@@ -10,8 +10,8 @@ export const BASE: ViewStyle = {
   borderRadius: 20,
 };
 
-export const BASE_TEXT = { color: 'white', fontSize: 20 };
-export const TEXT_SMALL = { fontSize: 15 };
+export const BASE_TEXT = { color: 'white', fontSize: 15 };
+export const TEXT_SMALL = { fontSize: 13 };
 
 export const BUTTON_CLEAR: ViewStyle = {
   backgroundColor: 'transparent',

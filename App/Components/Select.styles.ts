@@ -14,7 +14,7 @@ export const PILL_BASE: ViewStyle = {
 };
 
 export const PILL_SELECTED: ViewStyle = { backgroundColor: '#4caf50' };
-export const PILL_TEXT: TextStyle = { color: 'black', fontSize: 20 };
+export const PILL_TEXT: TextStyle = { color: 'black', fontSize: 15 };
 export const PILL_TEXT_SELECTED: TextStyle = { ...PILL_TEXT, color: 'white' };
 
 export const PILL_LEFT: ViewStyle = {
